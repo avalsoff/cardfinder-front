@@ -24,7 +24,8 @@ module.exports = {
   plugins: [
     '@typescript-eslint', // Allows for manually setting @typescript-eslint/* rules
     'prettier',
-    'react', // Allows for manually setting react/* rules
+    'react',
+    'import', // Allows for manually setting react/* rules
   ],
   settings: {
     react: {
@@ -49,5 +50,13 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    'import/newline-after-import': 1,
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      },
+    ],
   },
 }
