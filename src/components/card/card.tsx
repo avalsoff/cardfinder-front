@@ -1,8 +1,14 @@
 import React from 'react'
 import * as S from './styles'
 
-export const Card = () => (
-  <div>
-    <S.Card>card</S.Card>
-  </div>
+type Props = {
+  name?: string
+}
+
+const EMPTY_NAME = 'Пусто'
+
+export const Card = ({ name }: Props) => (
+  <S.Card>
+    <S.Name>{name || EMPTY_NAME}</S.Name>
+  </S.Card>
 )

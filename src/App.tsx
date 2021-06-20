@@ -1,19 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Card } from './components/card'
-
-const S = {
-  Container: styled.div`
-    display: flex;
-  `,
-}
+import { MainPage } from './pages/main'
 
 export const App = () => {
-  return (
-    <S.Container>
-      {Array.from({ length: 12 }).map((_, idx) => (
-        <Card key={idx} />
-      ))}
-    </S.Container>
-  )
+  return <MainPage />
 }

@@ -10,8 +10,8 @@ module.exports = {
     'react-app', // Use the recommended rules from eslint-config-react-app (bundled with Create React App)
     'eslint:recommended', // Use the recommened rules from eslint
     'plugin:@typescript-eslint/recommended', // Use the recommended rules from @typescript-eslint/eslint-plugin
-    'plugin:react/recommended', // Use the recommended rules from eslint-plugin-react
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier to display Prettier errors as ESLint errors
+    'plugin:react/recommended', // Use the recommended rules from eslint-plugin-react
   ],
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
@@ -44,18 +44,30 @@ module.exports = {
         bracketSpacing: true,
         jsxBracketSameLine: false,
         jsxSingleQuote: false,
-        printWidth: 100,
+        printWidth: 70,
         useTabs: false,
         endOfLine: 'auto',
       },
     ],
     'react/react-in-jsx-scope': 0,
+    'react/jsx-first-prop-new-line': [2, 'multiline-multiprop'],
+    'react/jsx-max-props-per-line': [
+      2,
+      { maximum: 1, when: 'multiline' },
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'import/newline-after-import': 1,
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
       },
     ],
   },
